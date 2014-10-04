@@ -7,6 +7,7 @@ app = Flask(__name__)
 callers = {
     "+447763501564": "Jordi",
     "+447804654075": "Thomas",
+    "+447795958759": "Charles",
 }
  
 @app.route("/", methods=['GET', 'POST'])
