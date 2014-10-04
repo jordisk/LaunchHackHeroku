@@ -24,18 +24,18 @@ class noseConeTypes(Enum):
 CNN = 2;
 XN = 0;
 
-#NoseConeTypes = ["cone","Ogive"]
-#cone = NoseConeTypes[0]
-#Ogive = NoseConeType[1]
+NoseConeTypes = ["cone","Ogive"]
+cone = NoseConeTypes[0]
+Ogive = NoseConeType[1]
 
 #Without enum
-#def NoseConeTerms (NoseCone):
-#    if NoseCone == cone:
-#        XN = 0.666 * N
-#    elif NoseCone == Ogive:
-#        XN = 0.466 * N
-#    else :
-#        print("Error, Cone not recognised")
+def NoseConeTerms (NoseCone):
+    if NoseCone == cone:
+        XN = 0.666 * N
+    elif NoseCone == Ogive:
+        XN = 0.466 * N
+    else :
+        print("Error, Cone not recognised")
 
 #With enum
 def noseConeTerms (noseCone):
@@ -46,5 +46,4 @@ def noseConeTerms (noseCone):
 	else :
 		print("Error, Cone was not recognised")
     
-#NoseConeTerms("cone") 
-noseConeTerms(noseConeTypes.cone)   
+NoseConeTerms("cone")    
