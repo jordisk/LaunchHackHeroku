@@ -10,5 +10,5 @@ xt = XP + (LT / 3) * (
 # Finding the Center of Pressure
 cnr = cnn + cnt + cnf
 
-x = (cnn * xn) 
-/ cnr
+x = ((cnn * xn) + (cnt * xt) + (cnf * xf)) 
+/ cnr	
