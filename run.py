@@ -19,13 +19,9 @@ def hello_monkey():
     motor = body_message.split(' ') [1]
 
     from_number = request.values.get('From', None)
-  '''
+  
     if from_number in callers:
         message = callers[from_number] + ", thanks for the message!"
-
-   '''
-   if from_number in callers:
-        message = "Hi " + callers[from_number] + "! Rocket name: " + rocket_name + " Motor: " + motor
     else:
         message = "Monkey, thanks for the message!"
  
