@@ -20,20 +20,18 @@ N	= 6.0	# number of fins
 #cnf 
 raizcuadrada = math.sqrt(1 + ((2 * LF) / (CR + CT))**2)
 
-cnf =  (1 + (R/(S + R) ) ) * (
+cnf =  (1.0 + (R/(S + R) ) ) * (
 
-	((4 * N) * (S/d)*(S/d)) /
+	((4.0 * N) * (S/d)*(S/d)) /
 
-	(1 + raizcuadrada))
+	(1.0 + raizcuadrada))
 
 print cnf
 
 
-
-
 #XF
 
-Xf = XB + ((XR / 3) * ((CR+(2*CT)) / (CR+CT) ) + (1/6) * (
+Xf = XB + ((XR / 3.0) * ((CR+(2.0*CT)) / (CR+CT) ) + (1.0/6.0) * (
 	(CR+CT) - ((CR*CT) / (CR+CT))
 	)
 
@@ -41,7 +39,6 @@ Xf = XB + ((XR / 3) * ((CR+(2*CT)) / (CR+CT) ) + (1/6) * (
 	)
 
 print Xf
-
 
 
 
