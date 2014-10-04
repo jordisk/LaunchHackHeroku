@@ -18,9 +18,11 @@ def hello_monkey():
 
     #NewPart
     body_message = request.values.get('Body', None)
+    rocket_name = body_message.split(' ') [0]
+    motor = body_message.split(' ') [1]
 
     if from_number in callers:
-        message = callers[from_number] + body_message 
+        message = "Hi " callers[from_number] + "! Rocket name: " + rocket_name + " Motor: " + motor
     else:
         message = "Phone not found"
  
