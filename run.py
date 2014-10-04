@@ -2,6 +2,7 @@ from flask import Flask, request, redirect
 import twilio.twiml
 from flask.ext.sqlalchemy import SQLAlchemy
 import os
+from models import *
 
 app = Flask(__name__)
 
@@ -24,10 +25,12 @@ def hello_monkey():
     motor = body_message.split(' ') [1]
 
     #cursor1 = conn.execute("SELECT VAR1, VAR2 FROM TBL_ROCKETS WHERE ID = " + rocket_name)
-    cursor1 = conn.execute("SELECT VAR1, VAR2 FROM TBL_ROCKETS WHERE ID = 1")
-    temp1 = []
-    for row in cursor1:
-        temp1.append(row)
+    #cursor1 = conn.execute("SELECT VAR1, VAR2 FROM TBL_ROCKETS WHERE ID = 1")
+    results = Result.query.all()
+    print len(results)
+   # temp1 = []
+    #for row in cursor1:
+    #    temp1.append(row)
 
     #cursor2 = conn.execute("SELECT VAR1, VAR2 FROM TBL_MOTORS WHERE ID = " + motor)
     #temp2 = []
@@ -36,16 +39,16 @@ def hello_monkey():
 
     from_number = request.values.get('From', None)
   
-    if from_number in callers:
-        message = "Hi! Rocket name: " + rocket_name + " Motor: " + motor + temp1[0]
-    else:
+    #if from_number in callers:
+    #    message = "Hi! Rocket name: " + rocket_name + " Motor: " + motor + temp1[0]
+  #  else:
         message = "Monkey, thanks for the message!"
  
     resp = twilio.twiml.Response()
     resp.message(message)
  
-    #return str(resp)
-    return temp1[0]
+    return str(resp)
+    #return temp1[0]
 
 if __name__ == "__main__":
     app.run(debug=True)
