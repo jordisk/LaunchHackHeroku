@@ -22,7 +22,7 @@ raizcuadrada = math.sqrt(1 + ((2 * LF) / (CR + CT))**2)
 
 cnf =  (1 + (R/(S + R) ) ) * (
 
-	((4 * N) * (S/d)**2) /
+	((4 * N) * (S/d)*(S/d)) /
 
 	(1 + raizcuadrada))
 
@@ -31,6 +31,16 @@ print cnf
 
 
 
+#XF
+
+Xf = XB + ((XR / 3) * ((CR+(2*CT)) / (CR+CT) ) + (1/6) * (
+	(CR+CT) - ((CR*CT) / (CR+CT))
+	)
+
+
+	)
+
+print Xf
 
 
 
