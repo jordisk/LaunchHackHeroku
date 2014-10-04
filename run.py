@@ -14,7 +14,7 @@ def hello_monkey():
     """Respond and greet the caller by name."""
  
     #NewPart
-    body_message = request.values.get('Body', None)
+    body_message = str(request.values.get('Body', None))
     #rocket_name = body_message.split(' ') [0]
     #motor = body_message.split(' ') [1]
 
