@@ -22,7 +22,8 @@ def hello_monkey():
     rocket_name = body_message.split(' ') [0]
     motor = body_message.split(' ') [1]
 
-    cursor1 = conn.execute("SELECT VAR1, VAR2 FROM TBL_ROCKETS WHERE ID = " + rocket_name)
+    #cursor1 = conn.execute("SELECT VAR1, VAR2 FROM TBL_ROCKETS WHERE ID = " + rocket_name)
+    cursor1 = conn.execute("SELECT VAR1, VAR2 FROM TBL_ROCKETS WHERE ID = 1")
     temp1 = []
     for row in cursor1:
         temp1.append(row)
@@ -42,7 +43,8 @@ def hello_monkey():
     resp = twilio.twiml.Response()
     resp.message(message)
  
-    return str(resp)
- 
+    #return str(resp)
+    return temp1[0]
+
 if __name__ == "__main__":
     app.run(debug=True)
