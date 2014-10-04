@@ -13,6 +13,5 @@ itsdangerous==0.24
 psycopg2==2.5.4
 six==1.8.0
 twilio==3.6.7
-vboxapi==1.0
 virtualenv==1.11.6
 wsgiref==0.1.2
