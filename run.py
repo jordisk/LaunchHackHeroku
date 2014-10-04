@@ -35,7 +35,7 @@ def hello_monkey():
     from_number = request.values.get('From', None)
   
     if from_number in callers:
-        message = "Hi! Rocket name: " + rocket_name + " Motor: " + motor + temp1[0]+ temp1[1] + temp2[0]+ temp2[1]
+        message = "Hi! Rocket name: " + rocket_name + " Motor: " + motor + temp1[0]+ temp2[0]
     else:
         message = "Monkey, thanks for the message!"
  
