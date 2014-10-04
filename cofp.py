@@ -12,3 +12,19 @@ R	= 3	# radius of body at aft end
 XR	= 4	# distance between fin root leading edge and fin tip leading edge parallel to body
 XB	= 5	# distance from nose tip to fin root chord leading edge
 N	= 6	# number of fins
+
+# Conical Transitions
+cnt = 2( ((dR/d)**2) - ((dF) **2))
+xt = XP + (LT / 3) * (
+	1 + ( 
+			(1 - (dF / dR)) /
+			(1 - ((dF / dR)**2)) 
+		)
+)
+
+# Finding the Center of Pressure
+cnr = cnn + cnt + cnf
+
+x = ()
+
+
