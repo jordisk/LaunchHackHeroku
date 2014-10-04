@@ -1,8 +1,11 @@
 from flask import Flask, request, redirect
 import twilio.twiml
- 
+import sqlite3
+
 app = Flask(__name__)
- 
+
+conn = sqlite3.connect("rockets.db") 
+
 # Try adding your own number to this list!
 callers = {
     "+447763501564": "Jordi",
@@ -19,10 +22,20 @@ def hello_monkey():
     rocket_name = body_message.split(' ') [0]
     motor = body_message.split(' ') [1]
 
+    cursor1 = conn.execute("SELECT VAR1, VAR2 FROM TBL_ROCKETS WHERE ID = " + int(rocket_name))
+    temp1 = []
+    for row in cursor1:
+        temp1.append(row)
+
+    cursor2 = conn.execute("SELECT VAR1, VAR2 FROM TBL_MOTORS WHERE ID = " + int(rocket_name))
+    temp2 = []
+    for row in cursor2:
+        temp2.append(row)
+
     from_number = request.values.get('From', None)
   
     if from_number in callers:
-        message = "Hi! Rocket name: " + rocket_name + " Motor: " + motor
+        message = "Hi! Rocket name: " + rocket_name + " Motor: " + motor + temp1[0]+ temp1[1] + temp2[0]+ temp2[1]
     else:
         message = "Monkey, thanks for the message!"
  
