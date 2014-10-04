@@ -22,7 +22,7 @@ def hello_monkey():
     motor = body_message.split(' ') [1]
 
     if from_number in callers:
-        message = "Hi " callers[from_number] + "! Rocket name: " + rocket_name + " Motor: " + motor
+        message = "Hi " + callers[from_number] + "! Rocket name: " + rocket_name + " Motor: " + motor
     else:
         message = "Phone not found"
  
