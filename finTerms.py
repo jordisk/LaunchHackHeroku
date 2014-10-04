@@ -17,11 +17,24 @@ XR	= 4	# distance between fin root leading edge and fin tip leading edge paralle
 XB	= 5	# distance from nose tip to fin root chord leading edge
 N	= 6	# number of fins
 
-
+#cnf 
 raizcuadrada = math.sqrt(1 + ((2 * LF) / (CR + CT))**2)
 
-cnf = (1+ (R/(S + R))) * ((4 * N) * (S/d)**2) / (1 + raizcuadrada)
+cnf =  (1 + (R/(S + R) ) ) * (
 
-print raizcuadrada
+	((4 * N) * (S/d)**2) /
+
+	(1 + raizcuadrada))
+
 print cnf
+
+
+
+
+
+
+
+
+
+
 
