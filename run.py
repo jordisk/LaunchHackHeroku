@@ -18,7 +18,7 @@ def hello_monkey():
     if from_number in callers:
         message = callers[from_number] + ", thanks for the message!"
     else:
-        message = "Monkey, thanks for the message!"
+        message = "Phone not found"
  
     resp = twilio.twiml.Response()
     resp.message(message)
