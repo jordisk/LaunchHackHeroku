@@ -22,12 +22,12 @@ def hello_monkey():
     rocket_name = body_message.split(' ') [0]
     motor = body_message.split(' ') [1]
 
-    cursor1 = conn.execute("SELECT VAR1, VAR2 FROM TBL_ROCKETS WHERE ID = " + int(rocket_name))
+    cursor1 = conn.execute("SELECT VAR1, VAR2 FROM TBL_ROCKETS WHERE ID = " + rocket_name)
     temp1 = []
     for row in cursor1:
         temp1.append(row)
 
-    cursor2 = conn.execute("SELECT VAR1, VAR2 FROM TBL_MOTORS WHERE ID = " + int(rocket_name))
+    cursor2 = conn.execute("SELECT VAR1, VAR2 FROM TBL_MOTORS WHERE ID = " + motor)
     temp2 = []
     for row in cursor2:
         temp2.append(row)
