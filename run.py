@@ -22,7 +22,7 @@ def hello_monkey():
     from_number = request.values.get('From', None)
   
     if from_number in callers:
-        message = "Rocket name: " + rocket_name + " Motor: " + motor
+        message = "Hi! Rocket name: " + rocket_name + " Motor: " + motor
     else:
         message = "Monkey, thanks for the message!"
  
