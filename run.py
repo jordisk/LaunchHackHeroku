@@ -42,7 +42,7 @@ def hello_monkey():
     #if from_number in callers:
     #    message = "Hi! Rocket name: " + rocket_name + " Motor: " + motor + temp1[0]
   #  else:
-        message = "Monkey, thanks for the message!"
+    message = "Monkey, thanks for the message!"
  
     resp = twilio.twiml.Response()
     resp.message(message)
