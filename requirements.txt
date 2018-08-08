@@ -15,4 +15,4 @@ six==1.8.0
 twilio==3.6.7
 virtualenv==1.11.6
 wsgiref==0.1.2
-gunicorn==19.0.0
+gunicorn ~> 19.5.0
